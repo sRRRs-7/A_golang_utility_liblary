@@ -1,10 +1,15 @@
 package main
 
 import (
-	"test/doubleList"
+	"test/parentheses"
 )
 
 func main() {
 	//linkedList.LinkedList()
-	doubleList.DoubleList()
+	//doubleList.DoubleList()
+	//stack.StackMain()
+	//stack.LinkedList()
+	//queue.QueueMain()
+	//reverseInput.ReverseInput()
+	parentheses.ParenthesesMain()
 }
