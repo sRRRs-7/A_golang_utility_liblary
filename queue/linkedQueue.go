@@ -7,10 +7,12 @@ import (
 type Node struct {
 	data string
 	next *Node
+	prev *Node
 }
 
 type List struct {
 	front *Node
+	rear *Node
 }
 
 func LinkedQueue() {
@@ -37,15 +39,27 @@ func (l *List) enQueue(data string) {
 		data: data,
 		next: l.front,
 	}
+
+	if l.front != nil {
+		l.front.prev = node
+	}
 	l.front = node
+
+	f := l.front
+	for f.next != nil {
+		f = f.next
+	}
+	l.rear = f
 }
 
 func (l *List) deQueue() (node *Node, b bool) {
 	if l.isEmpty() {
 		return node, false
 	}
-	node = l.front
-	l.front = l.front.next
+	node = l.rear
+	l.rear.prev.next = nil
+	l.rear = nil
+	l.rear = node.prev
 	return node, true
 }
 

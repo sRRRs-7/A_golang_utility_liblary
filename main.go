@@ -1,17 +1,15 @@
 package main
 
-import (
-	"test/channel"
-)
+import "test/queue"
 
 func main() {
-	channel.ChanMain()
+	//channel.ChanMain()
 	//linkedList.LinkedList()
 	//doubleList.DoubleList()
 	//stack.StackMain()
 	//stack.LinkedList()
 	//queue.QueueMain()
-	//queue.LinkedQueue()
+	queue.LinkedQueue()
 	//reverseInput.ReverseInput()
 	//parentheses.ParenthesesMain()
 }
