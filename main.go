@@ -1,6 +1,6 @@
 package main
 
-import "test/queue"
+import "test/tree"
 
 func main() {
 	//channel.ChanMain()
@@ -9,7 +9,9 @@ func main() {
 	//stack.StackMain()
 	//stack.LinkedList()
 	//queue.QueueMain()
-	queue.LinkedQueue()
+	//queue.LinkedQueue()
 	//reverseInput.ReverseInput()
 	//parentheses.ParenthesesMain()
+	//array.ArrayInsert()
+	tree.LinkTree()
 }

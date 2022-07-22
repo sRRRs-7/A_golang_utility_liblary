@@ -2,7 +2,12 @@ package channel
 
 import (
 	"fmt"
+	"math"
 )
+
+type Number interface {
+	~float64 | ~int
+}
 
 func ChanMain() {
 	n := 3.0
@@ -24,12 +29,12 @@ func ChanMain() {
 }
 
 // generics
-func process1[T1 float64 | int](n T1, ch chan<- T1) {
-	result1 := n * n
-	ch<- result1
+func process1[T1 Number](n T1, ch chan<- float64) {
+	result := math.Pow(float64(n), float64(2))
+	ch<- result
 }
 
 func process2[T1 float64 | int](n T1, ch2 chan<- T1) {
-	result1 := n * n
-	ch2<- result1
+	result := n * n
+	ch2<- result
 }
