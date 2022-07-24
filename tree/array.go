@@ -1,3 +1,0 @@
-package tree
-
-func Tree() {}

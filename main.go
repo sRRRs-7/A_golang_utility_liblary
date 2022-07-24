@@ -13,5 +13,6 @@ func main() {
 	//reverseInput.ReverseInput()
 	//parentheses.ParenthesesMain()
 	//array.ArrayInsert()
-	tree.LinkTree()
+	//tree.LinkTree()
+	tree.NewLinkTree()
 }
