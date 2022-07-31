@@ -4,11 +4,14 @@ import (
 	"fmt"
 	"os"
 	"runtime/trace"
-	"test/all"
+	"test/concurrency"
+	"test/ioFile"
 )
 
 func main() {
+	ioFile.Io()
 	//channel.ChanMain()
+	//channel.Channel2()
 	//linkedList.LinkedList()
 	//doubleList.DoubleList()
 	//stack.StackMain()
@@ -20,8 +23,20 @@ func main() {
 	//array.ArrayInsert()
 	//tree.LinkTree()
 	//tree.NewLinkTree()
-	//all.GoAll()
-	Trace()
+	//concurrency.GoAll()
+	//Trace()
+	//stringBuilder.Builder()
+	//stringBuilder.Main()
+	//design.SyncFunc()
+	//design.Main()
+	//design.Facets()
+	//design.Parameter()
+	//design.Function()
+	//design.DirectorFunc()
+	//factory.FactoryDesign()
+	//factory.FactoryDesign2()
+	//factory.Factory3()
+	//prototype.Prototype()
 }
 
 func Trace() {
@@ -37,7 +52,7 @@ func Trace() {
 	}
 	defer trace.Stop()
 
-	all.GoAll()
+	concurrency.GoAll()
 
 	fmt.Println("Hello")
 }
